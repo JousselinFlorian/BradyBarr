@@ -462,6 +462,8 @@
 				background-color: transparent;
 				border: solid 2px #e5e6e7;
 				color: inherit;
+				position:relative;
+				margin-top:30%;
 			}
 
 				input[type="button"].style2:hover,
@@ -494,7 +496,6 @@
 			margin: 0;
 			overflow-x: hidden;
 		}
-		
 			.main.style1 {
 				text-align: center;
 				padding: 10em 0 10em 0;
@@ -621,6 +622,7 @@
 				.dark .button.style2.down {
 					background-image: url('images/dark-arrow.svg');
 				}
+				
 		
 /*********************************************************************************/
 /* Icons                                                                         */
