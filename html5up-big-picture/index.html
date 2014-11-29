@@ -59,17 +59,9 @@
 		
 		<!-- One -->
 			<section id="one" class="main style2 right dark fullscreen">
-					<html>
-					<div class="video">
-					<video width="630" height="360" controls>
-					<source src="ALaBanqueZero.mp4" type="video/mp4">
-					</video>
-					</div>
-					</html>	
-				<div class="content box style2">
-					<header>
-						<h2>What I Do</h2>
-					</header>
+					
+					<!-- Paypal -->
+					<div class="paypal">
 					<p><form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 					<input type="hidden" name="cmd" value="_xclick">
 					<input type="hidden" name="business" value="mail@gmail.com">
@@ -78,9 +70,7 @@
 					<input type="hidden" name="amount" value="10.0"> 
 					<input type="hidden" name="return" value="http://planetoftheweb.com/admin/form-thanks.php"> 
 					<input type="image" name="submit" border="0" src="https://www.paypal.com/en_US/i/btn/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
-					<header>
-						<h2>Or</h2>
-					</header>
+					
 					</form></p>
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">  
 					<input type="hidden" name="business" value="mails@gmail.com">  
@@ -92,7 +82,57 @@
 					<input type="hidden" name="p3" value="1">     <!-- Duration  1 --> 
 					<input type="hidden" name="t3" value="M">    <!-- Frequency Month --> 
 					<input type="image" name="submit" border="0" src="https://www.paypal.com/en_US/i/btn/btn_subscribe_LG.gif" alt="PayPal - The safer, easier way to pay online">
-					</form> 
+					</form>
+					</div>
+					
+				<div class="content box style2">
+					<header>
+						<!-- Song Player -->
+						<form>
+						<input type="button" value="Aie Aie Aie J'ai Mal" onClick="EvalSound('song2')">
+						<input type="button" value="Cash ton cerveau" onClick="EvalSound('song11')">
+						</form>
+						
+						<audio id="song2" src="AieAieAieJaiMal.mp3" preload="auto" autobuffer></audio>
+						<audio id="song11" src="CashTonCerveau.mp3" spreload="auto" autobuffer></audio>
+						
+						<script>
+						var current;
+						function EvalSound(soundobj)
+						{
+							if (soundobj != 'pause' && soundobj != 'replay')
+							{
+								var song = document.getElementById(soundobj);
+								song.currentTime = 0
+								current = soundobj;
+							}
+							var stopsound2 = document.getElementById('song2');
+							var stopsound11 = document.getElementById('song11');
+							stopsound2.pause();
+							stopsound11.pause();
+							if (current == "song2" && soundobj == 'replay')
+							{
+								var replay2 = document.getElementById('song2');
+								replay2.play();
+							}
+							if (current == "song11" && soundobj == 'replay')
+							{
+								var replay11 = document.getElementById('song11');
+								replay11.play();
+							}
+							song.play();
+						}
+						</script>
+						
+					</header>
+					
+					<div class="control_song">
+					<form>
+					<button type="button" onClick="EvalSound('pause')"><img src="images/pause.png"></button>
+					<button type="button" onClick="EvalSound('replay')"><img src="images/play.png"></button>
+					</form>
+					</div>
+					
 				</div>
 				<a href="#two" class="button style2 down anchored">Next</a>
 			</section>
@@ -101,11 +141,16 @@
 			<section id="two" class="main style2 left dark fullscreen">
 				<div class="content box style2">
 					<header>
-						<h2>Who I Am</h2>
+					
 					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. 
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, 
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+					<!-- Video -->
+					<html>
+					<div class="video">
+					<video width="630" height="360" controls>
+					<source src="ALaBanqueZero.mp4" type="video/mp4">
+					</video>
+					</div>
+					</html>
 				</div>
 				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>

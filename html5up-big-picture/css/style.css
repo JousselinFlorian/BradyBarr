@@ -476,6 +476,22 @@
 				.button.style2.down {
 					background-image: url('images/arrow.svg');
 				}
+				
+	/* Song Control */
+	
+		.control_song
+		{
+			margin-top:15.0em;
+			text-align: center;
+		}
+		
+	/* Paypal */
+	
+		.paypal
+		{
+			margin-top: -6.0em;
+			text-align: center;
+		}	
 
 	/* Box */
 
@@ -629,8 +645,8 @@
 		
 		div.video {
 			text-align: top;
-			margin-top: -9.5em;
-			margin-left: 0.5em;
+			margin-top: -1.0em;
+			margin-left: -2.5em;
 		}
 		
 /*********************************************************************************/
