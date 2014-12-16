@@ -385,6 +385,7 @@
 
 	/* Button */
 		
+		/* button page 2 */
 		input[type="button"],
 		input[type="submit"],
 		input[type="reset"],
@@ -429,11 +430,10 @@
 			}
 			
 				.button.down.anchored {
-					bottom: 0;
 					border-bottom: 0;
 					border-radius: 3em 3em 0 0;
 					height: 4.5em;
-					margin-left: -2.5em;
+					border-right: 10.0em;
 				}
 			
 			.button.anchored {
@@ -475,15 +475,33 @@
 				
 				.button.style2.down {
 					background-image: url('images/arrow.svg');
+					margin-top:30%;
 				}
-				
+
+	/* Btn 2 */	
+	
+		.btn_p2
+		{
+			margin-top: -19em;
+			text-align: center;	
+		}
+	
+	/* Btn 3 */	
+	
+		.btn_p3
+		{
+			margin-top: -21em;
+			text-align: center;	
+		}
+		
 	/* Song Control */
 	
 		.control_song
 		{
-			margin-top:15.0em;
+			margin-top:10.0em;
 			text-align: center;
 		}
+		
 		
 	/* Paypal */
 	
@@ -498,11 +516,11 @@
 		.box {
 			background: #fff;
 			color: #39454b;
-			padding: 2em;
+			padding: 1em;
 		}
 		
 			.box.style2 {
-				padding: 3.5em 2.5em 3.5em 2.5em;
+				padding: -5.5em 2.5em -5.5em -5.5em;
 			}
 
 	/* Main */
@@ -573,6 +591,9 @@
 
 					.main.style2.left .content {
 						left: 0;
+						top: -7em;
+						padding-top: 0em;
+						padding-bottom: 0em;
 					}
 
 				.main.style2.right {
@@ -643,10 +664,9 @@
 /* Video                                                                        */
 /*********************************************************************************/
 		
-		div.video {
-			text-align: top;
-			margin-top: -1.0em;
-			margin-left: -2.5em;
+		.video {
+			text-align: center;
+			margin-left: -0.8em;
 		}
 		
 /*********************************************************************************/
@@ -785,7 +805,7 @@
 				position: relative;
 				top: 0;
 				left: 0;
-				opacity: 1.0;
+				
 			
 				-moz-transition: all 1s ease;
 				-webkit-transition: all 1s ease;
@@ -799,8 +819,7 @@
 				-ms-transform: translateZ(0);
 				transform: translateZ(0);
 			}
-		
-			#work .row.images.inactive {
+		#work .row.images.inactive {
 			}
 
 				#work .row.images.inactive .image {
