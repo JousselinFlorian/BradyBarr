@@ -6,6 +6,7 @@
 -->
 <html>
 	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 		<title>Hugo21</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
@@ -32,11 +33,12 @@
 
 					<nav id="nav">
 						<ul>
-							<li><a href="#intro">HUGO21</a></li>
-							<li><a href="#one">Video Clip</a></li>
-							<li><a href="#two">Dates / Concerts</a></li>
-							<li><a href="#work">Photos</a></li>
-							<li><a href="#contact">Contact</a></li>
+							<li><a href="#intro"><font face="Arial Black" size="5">HUGO21</font></a></li>
+							<li><a href="#one"><font face="Arial Black" size="5">Musique</font></a></li>
+							<li><a href="#two"><font face="Arial Black" size="5">Dates/Concerts</font></a></li>
+							<li><a href="#three"><font face="Arial Black" size="5">Video Clip</font></a></li>
+							<li><a href="#work"><font face="Arial Black" size="5">Photos</font></a></li>
+							<li><a href="#contact"><font face="Arial Black" size="5">Contact</font></a></li>
 						</ul>
 					</nav>
 
@@ -45,9 +47,15 @@
 		<!-- Intro -->
 		
 			<section id="intro" class="main style1 dark fullscreen">
-				<div id="intro2">
-						<img src="images/album.jpg" style="width:517px; height:517px;"/>
-						<img src="images/logo_hugo21.jpg" style="width:602px; height:173px;"/>
+				<div class="album">
+						<img src="images/album.jpg" style="width:450px; height:450px;"/>
+				</div>
+				<div class="title">
+						<img src="images/logo_hugo21.jpg" style="width:371px; height:406px;"/>
+				</div>
+				<div class="sous_titre">
+						<img src="images/sous_titre.jpg" style="width:942px; height:80px;"/>
+				</div>
 					<div class="btn_p1">
 						<a href="#one" class="button style2 down">More</a>
 					</div>
@@ -55,7 +63,7 @@
 			</section>
 		
 		<!-- One -->
-			<section id="one" img="intro.jpg" class="main style1 dark fullscreen">
+			<section id="one" class="main style1 dark fullscreen">
 					
 					<!-- Paypal
 					<div class="paypal">
@@ -83,7 +91,6 @@
 					-->
 					
 				<div class="content box style2">
-					<header>
 						<!-- Song Player -->
 						<form>
 						<input type="button" value="Aie Aie Aie J'ai Mal" onClick="EvalSound('song2')">
@@ -118,8 +125,6 @@
 							song.play();
 						}
 						</script>
-						
-					</header>
 					<!-- song player : play / pause-->
 					<div class="control_song">
 					<form>
@@ -136,15 +141,56 @@
 		<!-- Two -->
 			<section id="two" class="main style2 left dark fullscreen">
 				<div class="content box style2">
-					<!-- Video -->
-					<html>
-					<div class="video">
-					<iframe src="http://www.youtube.com/embed/15ZBOmN-Gxs"
-					 width="630" height="360"></iframe>
-					</div>
-					</html>
+				<div class="dates">
+					<br/>
+					<a><font face="Arial Black" size="2">Dates à venir:</font></a><br/>
+					<a><font face="Arial Black" size="2">Dates faites:</font></a><br/>
+					<a><font face="Arial Black" size="1">6 décembre Au Jas rod aux Pennes Mirabeau (13)</font></a><br/>
+					<a><font face="Arial Black" size="1">4 octobre à La Casa D'Oli  à Aubagne (13)</font></a><br/>
+					<a><font face="Arial Black" size="1">4 octobre à l'association Vivre ensemble (13014)</font></a><br/>
+					<a><font face="Arial Black" size="1">11 Juillet Caf conc Les Caudalies.Les Vans (07)</font></a><br/>
+					<a><font face="Arial Black" size="1">10 Juillet Café de la Poste à Manosque (04)</font></a><br/>
+					<a><font face="Arial Black" size="1">21 Juin Place Sébastopol à Marseille 13</font></a><br/>
+					<a><font face="Arial Black" size="1">18 Juin au vilain petit canard Marseille 13</font></a><br/>
+					<a><font face="Arial Black" size="1">14 Juin au Festival Rock'Vert à Roquevaire 13</font></a><br/>
+					<a><font face="Arial Black" size="1">12 Juin au Jas Rod aux Pennes Mirabeau 13</font></a><br/>
+					<a><font face="Arial Black" size="1">Avec l'école de son la Farinière</font></a><br/>
+					<a><font face="Arial Black" size="1">7 Juin à la Ratepenade Roquevaire 13</font></a><br/>
+					<a><font face="Arial Black" size="1">16 Mai au Havana Café Vieux port 13</font></a><br/>
+					<a><font face="Arial Black" size="1">9 Mai au point de Bascule Marseille 13</font></a><br/>
+					<a><font face="Arial Black" size="1">7 DécembreBigoud Café St sauveur de Creuzière 07</font></a><br/>
+					<a><font face="Arial Black" size="1">5 Décembre au Havana café Marseille 13</font></a><br/>
+					<a><font face="Arial Black" size="1">26 Septembre au Sextius Bar Aix en Pce 13</font></a><br/>
+					<a><font face="Arial Black" size="1">Avec Radio Zinzine</font></a><br/>
+					<a><font face="Arial Black" size="1">21 Septembre au Petit M Marseille 2013</font></a><br/>
+				</div>
+				</div>
+				<div class="date_concert">
+						<img src="images/date_concert.jpg" style="width:517px; height:459px;"/>
 				</div>
 				<div class="btn_p3">
+				<a href="#three" class="button style2 down">Next</a>
+				</div>
+			</section>
+		<!-- Three -->
+			<section id="three" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<!-- Video -->
+					<div class="video">
+					<br/>
+					<img src="images/video_img1.jpg" style="width:407px; height:45px;"/>
+					<iframe src="http://www.youtube.com/embed/15ZBOmN-Gxs"
+					 width="630" height="360"></iframe>
+					<img src="images/video_img2.jpg" style="width:344px; height:41px;"/>
+					</div>
+				</div>
+				<div class="image_video">
+					<img src="images/video_clip_img.jpg" style="width:339px; height:573px;"/>
+				</div>
+				<div class="image_fl">
+					<img src="images/video_img3.jpg" style="width:566px; height:46px;"/>
+				</div>
+				<div class="btn_p4">
 				<a href="#work" class="button style2 down">Next</a>
 				</div>
 			</section>
