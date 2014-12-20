@@ -483,7 +483,8 @@
 		.btn_p1
 		{
 			margin-top: -23em;
-			text-align: center;	
+			text-align: center;
+			position: static;
 		}
 		
 	/* Btn 2 */	
@@ -684,6 +685,8 @@
 	.photo_1
 	{
 		text-align: top, center;
+		margin-left: 2.5em;
+		margin-top: -6.5em;
 	}
 
 
@@ -708,6 +711,7 @@
 		text-align: left;
 		margin-left: 8em;
 		margin-top: -18em;
+		position: static;
 	}
 
 
@@ -767,6 +771,7 @@
 		text-align: right;
 		margin-right: 8em;
 		margin-top: -27em;
+		position: static;
 	}
 	
 /*********************************************************************************/
@@ -777,6 +782,7 @@
 	{
 		text-align: center;
 		margin-top: 3em;
+		position: relative;
 	}
 
 /*********************************************************************************/
