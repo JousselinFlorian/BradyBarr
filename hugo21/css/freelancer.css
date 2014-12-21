@@ -4,6 +4,46 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+input[type="btn"],
+input[type="submit"],
+input[type="reset"],
+btn {
+         -webkit-border-radius: 3;
+        -moz-border-radius: 3;
+        border-radius: 3px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        background: #000000;
+        padding: 0px 400px 0px 20px;
+        border: solid #ECD994 1px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    text-align:left;
+                    margin-left:-600px;
+                  }
+    input[type="btn"]:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover,
+    .btn:hover {
+        background: #ECD994;
+        background-image: -webkit-linear-gradient(top, #ECD994, #bda963);
+        background-image: -moz-linear-gradient(top, #ECD994, #bda963);
+        background-image: -ms-linear-gradient(top, #ECD994, #bda963);
+        background-image: -o-linear-gradient(top, #ECD994, #bda963);
+        background-image: linear-gradient(to bottom, #ECD994, #bda963);
+        text-decoration: none;
+  }
+  
+.audiobutton {
+    width:auto;
+    height:auto;
+    max-width:30px;
+    max-height:30px;
+
+}
+
+
 body {
     overflow-x: hidden;
 }
@@ -449,7 +489,10 @@ footer .footer-below {
     opacity: 0;
 }
 
+    
+
 .photo2 {
     margin-left: 20%;
     margin-top: 0%
 }
+
