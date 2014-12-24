@@ -8,7 +8,7 @@ input[type="btn"],
 input[type="submit"],
 input[type="reset"],
 btn {
-         -webkit-border-radius: 3;
+        -webkit-border-radius: 3;
         -moz-border-radius: 3;
         border-radius: 3px;
         font-family: Arial;
@@ -16,6 +16,8 @@ btn {
         font-size: 20px;
         background: #000000;
         padding: 0px 400px 0px 20px;
+        padding-right: 300px;
+        width: 647px;
         border: solid #ECD994 1px;
                     text-decoration: none;
                     cursor: pointer;
@@ -496,3 +498,8 @@ footer .footer-below {
     margin-top: 0%
 }
 
+.play_pause
+{
+    text-align: center;
+    margin-left: 28%;
+}
