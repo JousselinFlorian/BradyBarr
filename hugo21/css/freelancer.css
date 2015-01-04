@@ -16,7 +16,7 @@ btn {
         font-size: 20px;
         background: #000000;
         padding: 0px 400px 0px 20px;
-        padding-right: 300px;
+        padding-right: 0px;
         width: 647px;
         border: solid #ECD994 1px;
                     text-decoration: none;
@@ -503,3 +503,15 @@ footer .footer-below {
     text-align: center;
     margin-left: 28%;
 }
+
+.albumv
+{
+    text_align:center;
+}
+
+.paypalal
+{
+    text-align: center;
+    margin-top: 40%;
+}
+
