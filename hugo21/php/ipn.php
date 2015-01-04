@@ -104,6 +104,12 @@ if (curl_errno($ch) != 0) // cURL error
 
 $tokens = explode("\r\n\r\n", trim($res));
 $res = trim(end($tokens));
+session_start();
+if (!isset($_SESSION['count'])) {
+  $_SESSION['count'] = 0;
+} else {
+  $_SESSION['count']++;
+}
 if (strcmp ($res, "VERIFIED") == 0) {
 	// check whether the payment_status is Completed
 	// check that txn_id has not been previously processed
@@ -111,18 +117,19 @@ if (strcmp ($res, "VERIFIED") == 0) {
 	// check that payment_amount/payment_currency are correct
 	// process payment and mark item as paid.
 	// assign posted variables to local variables
-	$item_name = $_POST['item_name'];
+	
+	$_SESSION['name'] = $_POST['item_name'];
+	$_SESSION['receiver_email'] = $_POST['receiver_email'];
+	$_SESSION['payment_status'] = $_POST['payment_status'];
+	$_SESSION['txn_id'] = $_POST['txn_id'];
+	
 	$item_number = $_POST['item_number'];
-	$payment_status = $_POST['payment_status'];
 	$payment_amount = $_POST['mc_gross'];
 	$payment_currency = $_POST['mc_currency'];
-	$txn_id = $_POST['txn_id'];
-	$receiver_email = $_POST['receiver_email'];
 	$payer_email = $_POST['payer_email'];
-        
+	
         if (payment_status == "Completed")
         {
-            
             file_put_content('log', print_r($_POST, true)
         }
 	else 

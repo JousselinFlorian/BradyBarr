@@ -80,16 +80,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <img class="img-responsive" src="img/album.png" alt="">
                 </div>
                 <div class="col-lg-6">
                     <div class="photo2">
-                <img class="img-responsive2" src="img/logo_hugo21.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="intro-text">
-                        <span class="name"><br/>Nouvelle Chanson FRANCAISE libre !</span>
+                        <?php
+                            $file_link = "<a href=\"../Song30s/send_file.php?file=".$_SESSION['name'].">cliquer sur le lien pour commencer le téléchargement de votre musique</a>";
+                        ?>
+                        <span class="name">Merci !<br/><br/><?php echo $file_link; ?></span>
                         <hr class="star-light">
                         <span class="skills">Hugo21</span>
                     </div>
@@ -98,4 +99,5 @@
         </div>
     </header>
 </body>
+<?php session_destroy();?>
 </html>
