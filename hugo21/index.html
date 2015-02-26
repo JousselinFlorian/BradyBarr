@@ -105,6 +105,9 @@
                 <div class="col-lg-12 text-center">
                     <h2>Musique</h2>
                     <hr class="star-primary">
+                    <div class="paypal_logo">
+                    <img src="img/logo_paypal.png" width=10%; height=10%;>
+                    </div>
                 </div>
                 
                     <!-- Song Player -->
@@ -122,17 +125,18 @@
                                         <input type="btn" readonly="readonly"  value="Je crois que tu crois                                                                        0.99€" onClick="EvalSound('song1')"><br/>
                                         </form>
                     </div>
+                     
                  </div>
                  <div class="col-lg-2 text-left">
-    			    <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    			    <form name="_xclick" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
 			    	<input type="hidden" name="cmd" value="_xclick">
 		    		<input type="hidden" name="business" value="management@hugo21.fr">
 	    			<input type="hidden" name="item_name" value="Je crois que tu crois">
     				<input type="hidden" name="currency_code" value="EUR">
     				<input type="hidden" name="amount" value="0.99">
-                                <input type="hidden" name="return" value="http://localhost/php/success.php">
-                                <input type="hidden" name="cancel_return" value="http://localhost/php/cancel.php">
-                                <input type="hidden" name="notify_url" value="http://localhost/php/ipn.php">
+                                <input type="hidden" name="return" value="http://www.newsite.hugo21.fr/php/success.php">
+                                <input type="hidden" name="cancel_return" value="http://www.newsite.hugo21.fr/php/cancel.php">
+                                <input type="hidden" name="notify_url" value="http://www.newsite.hugo21.fr/ipn.php">
                                <!-- <input type="hidden" name="return" value="Song_To_Sell/01_jeCroisQueTuCrois.zip"> -->
     				<input type="image" name="submit" onclick="this.form.submit()" border="0" src="img/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
                             </form>
@@ -151,15 +155,13 @@
 					</form>
                 </div>
                  <div class="col-lg-2 text-left">
-                    <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-					<input type="hidden" name="cmd" value="_xclick">
-					<input type="hidden" name="business" value="management@hugo21.fr">
-					<input type="hidden" name="item_name" value="Aie Aie Aie j'ai mal">
-					<input type="hidden" name="currency_code" value="EUR">
-					<input type="hidden" name="amount" value="0.99"> 
-					<input type="image" name="submit" onclick="this.form.submit()" border="0" src="img/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
-                    
-                                        </form>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                    ">
+                    <input type="image" onclick="this.form.submit()" src="img/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+                </form>
                  </div>
                  <div class="col-lg-4 text-left">
                     <div class="play_pause">

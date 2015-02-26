@@ -88,9 +88,15 @@
                 <div class="col-lg-12">
                     <div class="intro-text">
                         <?php
-                            $file_link = "<a href=\"../Song30s/send_file.php?file=".$_SESSION['name'].">cliquer sur le lien pour commencer le téléchargement de votre musique</a>";
+                            echo $_SESSION['name'];
+                            $file_link = "<a href=\"./send_file.php?file_name=" . $_SESSION['name'] . ".zip\">cliquer sur le lien pour commencer le téléchargement de votre musique</a>";
                         ?>
-                        <span class="name">Merci !<br/><br/><?php echo $file_link; ?></span>
+                        <span class="name">Merci !
+                            <br/>
+                            <br/>
+                                <?php echo $file_link; ?>
+                        </span>+
+                        
                         <hr class="star-light">
                         <span class="skills">Hugo21</span>
                     </div>
@@ -99,5 +105,5 @@
         </div>
     </header>
 </body>
-<?php session_destroy();?>
+<?php //session_destroy();?>
 </html>
