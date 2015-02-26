@@ -89,7 +89,7 @@
                     <div class="intro-text">
                         <?php
                             echo $_SESSION['name'];
-                            $file_link = "<a href=\"./send_file.php?file_name=" . $_SESSION['name'] . ".zip\">cliquer sur le lien pour commencer le téléchargement de votre musique</a>";
+                            $file_link = "<a href=\"./send_file.php?file=g586mrhh\">cliquer sur le lien pour commencer le téléchargement de votre musique</a>";
                         ?>
                         <span class="name">Merci !
                             <br/>

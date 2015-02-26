@@ -4,6 +4,8 @@
 // Especially useful if you encounter network errors or other intermittent problems with IPN (validation).
 // Set this to 0 once you go live or don't require logging.
 
+require 'PHPMailerAutoload.php';
+
 define("DEBUG", 0);
 
 // Set to 0 once you're ready to go live
@@ -28,17 +30,10 @@ $header .= "Content-Type: application/x-www-form-urlencoded\r\n";
 $header .= "Content-Length: " . strlen($req) . "\r\n\r\n";
 $fp = fsockopen ('ssl://www.sandbox.paypal.com', 443, $errno, $errstr, 30 );
 
-session_start();
-if (!isset($_SESSION['count'])) {
-  $_SESSION['count'] = 0;
-} else {
-  $_SESSION['count']++;
-}
-
-$_SESSION['name'] = $_POST['item_name'];
-$_SESSION['receiver_email'] = $_POST['receiver_email'];
-$_SESSION['payment_status'] = $_POST['payment_status'];
-$_SESSION['txn_id'] = $_POST['txn_id'];
+$name = $_POST['item_name'];
+$receiver_email = $_POST['receiver_email'];
+$payment_status = $_POST['payment_status'];
+$txn_id = $_POST['txn_id'];
 
 $item_number = $_POST['item_number'];
 $payment_amount = $_POST['mc_gross'];
@@ -66,6 +61,22 @@ else {
                     if ($email_account == receiver_email){
                         if ($payment_amout == '0.99' || $payment_amount == '9.99' ){
                             
+                            
+                            $boundary = "_".md5 (uniqid (rand())); 
+
+                            $attached_file = file_get_contents($name.'zip'); //file name ie: ./image.jpg 
+                            $attached_file = chunk_split(base64_encode($attached_file)); 
+
+                            $message = 'Bonjour !';
+                            
+                            $attached = "\n\n". "--" .$boundary . "\nContent-Type: application; name=\"$name\"\r\nContent-Transfer-Encoding: base64\r\nContent-Disposition: attachment; filename=\"$name\"\r\n\n".$attached_file . "--" . $boundary . "--"; 
+
+                            $headers ="From: ".$email_account." \r\n"; 
+                            $headers .= "MIME-Version: 1.0\r\nContent-Type: multipart/mixed; boundary=\"$boundary\"\r\n"; 
+
+                            $body = "--". $boundary ."\nContent-Type: text/plain; charset=ISO-8859-1\r\n\n".$message . $attached; 
+
+                            mail($email,$subject,$body,$headers);
                         }
                     }
                 }
